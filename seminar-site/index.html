@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>セミナーのご案内 | IBM社内向け</title>
+<style>
+  :root {
+    --blue: #0f62fe;
+    --blue-dark: #0043ce;
+    --ink: #161616;
+    --muted: #525252;
+    --bg: #f4f4f4;
+    --line: #e0e0e0;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "IBM Plex Sans JP", "IBM Plex Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.7;
+  }
+  a { color: var(--blue); }
+
+  /* ヒーロー：images/hero.jpg を使用。下部は文字の可読性のため紺色を重ねています */
+  .hero {
+    position: relative;
+    min-height: 420px;
+    display: flex;
+    align-items: flex-end;
+    color: #fff;
+    background:
+      linear-gradient(180deg, rgba(0,17,65,0) 30%, rgba(0,17,65,.7) 100%),
+      url("images/hero.jpg") right center / cover no-repeat,
+      #0f62fe;
+  }
+  .hero-inner { width: 100%; max-width: 1040px; margin: 0 auto; padding: 48px 24px; }
+  .hero .tag { display: inline-block; background: var(--blue); padding: 2px 12px; font-size: 13px; letter-spacing: .05em; }
+  .hero h1 { margin: 12px 0 8px; font-size: clamp(22px, 3.2vw, 34px); line-height: 1.4; font-weight: 600; max-width: 760px; }
+  .hero h1 .when { display: block; font-size: .65em; font-weight: 400; margin-bottom: 4px; }
+  .hero h1 .nw { display: inline-block; }
+  .hero p { margin: 0; font-size: 16px; max-width: 680px; }
+
+  main { max-width: 1040px; margin: 0 auto; padding: 40px 24px 64px; }
+  section { margin-bottom: 48px; }
+  h2 { font-size: 24px; margin: 0 0 8px; font-weight: 600; }
+  .lead { color: var(--muted); margin: 0 0 24px; }
+
+  /* 概要 */
+  .overview { background: #fff; border-left: 4px solid var(--blue); padding: 8px 24px; }
+  .overview dl { display: grid; grid-template-columns: 120px 1fr; margin: 0; }
+  .overview dt, .overview dd { padding: 14px 0; border-bottom: 1px solid var(--line); margin: 0; }
+  .overview dt { font-weight: 600; }
+  .overview dl > :nth-last-child(-n+2) { border-bottom: none; }
+
+  /* リンクカード */
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+  .card { background: #fff; padding: 24px; display: flex; flex-direction: column; border-top: 3px solid var(--line); }
+  .card.primary { border-top-color: var(--blue); }
+  .card .label { font-size: 12px; color: var(--muted); letter-spacing: .05em; }
+  .card h3 { margin: 4px 0 8px; font-size: 18px; }
+  .card p { margin: 0 0 20px; color: var(--muted); font-size: 14px; flex: 1; }
+  .btn {
+    display: inline-block; text-align: center; text-decoration: none;
+    background: var(--blue); color: #fff; padding: 12px 20px; font-size: 15px; font-weight: 600;
+    border: 1px solid var(--blue);
+  }
+  .btn:hover { background: var(--blue-dark); border-color: var(--blue-dark); }
+  .btn:focus-visible { outline: 3px solid #000; outline-offset: 2px; }
+  .btn.secondary { background: #fff; color: var(--blue); }
+  .btn.secondary:hover { background: #e8f0ff; }
+  .btn::after { content: " \2197"; }
+
+  /* 手順 */
+  .steps { counter-reset: s; list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+  .steps li { counter-increment: s; background: #fff; padding: 16px 20px 16px 64px; position: relative; }
+  .steps li::before {
+    content: counter(s); position: absolute; left: 20px; top: 14px;
+    width: 30px; height: 30px; border-radius: 50%; background: var(--ink); color: #fff;
+    text-align: center; line-height: 30px; font-weight: 600;
+  }
+
+  .notice { background: #fff; border: 1px solid var(--line); padding: 16px 20px; font-size: 14px; color: var(--muted); }
+  footer { background: var(--ink); color: #c6c6c6; padding: 24px; text-align: center; font-size: 13px; }
+
+  @media (max-width: 560px) {
+    .overview dl { grid-template-columns: 1fr; }
+    .overview dt { border-bottom: none; padding-bottom: 0; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <span class="tag">IBM社内向け</span>
+    <h1><span class="when">【11/20(金)14:30-17:30 金融業界向けセミナー】</span><span class="nw">AI Innovation &amp; Trust Forum 2026</span> <span class="nw">AI活用を支える次世代セキュリティーとIT戦略</span></h1>
+    <p>お客様へのご案内にご活用いただける資料と、集客・登録状況の確認ページをまとめました。</p>
+  </div>
+</header>
+
+<main>
+
+  <section id="overview">
+    <h2>セミナー概要</h2>
+    <p class="lead">詳細は案内状をご確認ください。</p>
+    <div class="overview">
+      <dl>
+        <dt>セミナー名</dt><dd>11月20日開催 「金融業界向け AI Innovation &amp; Trust Forum 2026　AI活用を支える次世代セキュリティーとIT戦略 」</dd>
+        <dt>開催日時</dt><dd>2026年11月20日　14:30-17:30</dd>
+        <dt>開催形式</dt><dd>日本IBM虎ノ門本社　Innovation Studio</dd>
+        <dt>対象</dt><dd>金融機関のお客様</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section id="materials">
+    <h2>ご案内資料</h2>
+    <p class="lead">お客様へのご案内にお使いください。</p>
+    <div class="cards">
+      <article class="card">
+        <span class="label">資料</span>
+        <h3>案内状</h3>
+        <p>セミナーの詳細をまとめた案内状です。</p>
+        <a class="btn" href="https://ibm.box.com/s/4xab75xxjg4bmdnxco66k6clp2us0ku2" target="_blank" rel="noopener noreferrer">案内状を開く</a>
+      </article>
+      <article class="card">
+        <span class="label">資料</span>
+        <h3>ご案内向け1枚もの</h3>
+        <p>お客様にお渡しできる1枚ものの資料です。</p>
+        <a class="btn" href="https://ibm.box.com/s/nitc4degzpubkwjktq4ighd9bjqd9f7f" target="_blank" rel="noopener noreferrer">1枚ものを開く</a>
+      </article>
+      <article class="card">
+        <span class="label">資料</span>
+        <h3>お客様向けメール雛形</h3>
+        <p>お客様へご案内する際のメール文面の雛形です。</p>
+        <a class="btn" href="https://ibm.box.com/s/n3fztgzbmx5lx02a4gki0e7acqlqc5x7" target="_blank" rel="noopener noreferrer">メール雛形を開く</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="register">
+    <h2>集客・登録状況</h2>
+    <p class="lead">お客様のお申し込みと、登録状況の確認はこちらから。</p>
+    <div class="cards">
+      <article class="card primary">
+        <span class="label">お客様向け</span>
+        <h3>集客サイト（お申し込みページ）</h3>
+        <p>お客様にはこのURLをご案内ください。<br><a href="https://ibm.biz/security_1120" target="_blank" rel="noopener noreferrer">https://ibm.biz/security_1120</a></p>
+        <a class="btn" href="https://ibm.biz/security_1120" target="_blank" rel="noopener noreferrer">集客サイトを開く</a>
+      </article>
+      <article class="card primary">
+        <span class="label">社員向け</span>
+        <h3>登録状況確認ページ</h3>
+        <p>ご案内したお客様の登録状況を確認できます。</p>
+        <a class="btn secondary" href="https://www.ibm.com/events/reg/flow/ibm/7266irmb/sales-dash" target="_blank" rel="noopener noreferrer">登録状況を確認する</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="howto">
+    <h2>ご案内の流れ</h2>
+    <ol class="steps">
+      <li><strong>案内状・1枚ものを確認する。</strong>セミナーの内容と対象のお客様をご確認ください。</li>
+      <li><strong>お客様へメールで案内する。</strong>メール雛形をご利用ください。</li>
+      <li><strong>集客サイトのURLを伝える。</strong>お客様にお申し込みいただきます。</li>
+      <li><strong>登録状況を確認する。</strong>登録状況確認ページで、ご案内したお客様の状況をご確認ください。</li>
+    </ol>
+  </section>
+
+  <p class="notice">リンク先のBoxの資料は、IBM社員のみが閲覧できる場合があります。お客様へ資料を共有する際は、社内規定に従ってください。</p>
+
+</main>
+
+<footer>
+  &copy; IBM　社内限り（Internal use only）
+</footer>
+
+</body>
+</html>
